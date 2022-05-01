@@ -21,6 +21,7 @@ namespace Ppaint
 
         }
         //Variables//
+        bool check;
 
         private bool IsBrush = false;
         private bool IsEraser = false;
