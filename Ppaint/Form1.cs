@@ -1,4 +1,16 @@
-﻿using System;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Media;
+using System.IO;
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -32,7 +44,7 @@ namespace Ppaint
 
         Graphics graphics;
         Pen pen = new Pen(Color.Black, 3f);
-        SoundPlayer Sound = new SoundPlayer(@"D:\music\sewer-coin.wav");
+        SoundPlayer Sound = new SoundPlayer($"{Environment.CurrentDirectory}\\music\\sewer-coin.wav");
 
 
         ///////////////////Background functions///////////////////
@@ -209,62 +221,62 @@ namespace Ppaint
         //Sound buttons//
         private void SewerCoin_Click(object sender, EventArgs e)
         {
-            Sound = new SoundPlayer(@"D:\music\sewer-coin.wav");
+            Sound = new SoundPlayer($"{Environment.CurrentDirectory}\\music\\sewer-coin.wav");
         }
 
         private void River_Click(object sender, EventArgs e)
         {
-            Sound = new SoundPlayer(@"D:\music\river-cargo.wav");
+            Sound = new SoundPlayer($"{Environment.CurrentDirectory}\\music\\river-cargo.wav");
         }
 
         private void button28_Click(object sender, EventArgs e)
         {
-            Sound = new SoundPlayer(@"D:\music\rtty.wav");
+            Sound = new SoundPlayer($"{Environment.CurrentDirectory}\\music\\rtty.wav");
         }
 
         private void button24_Click(object sender, EventArgs e)
         {
-            Sound = new SoundPlayer(@"D:\music\building-work.wav");
+            Sound = new SoundPlayer($"{Environment.CurrentDirectory}\\music\\building-work.wav");
         }
 
         private void Frogs_Click(object sender, EventArgs e)
         {
-            Sound = new SoundPlayer(@"D:\music\dersinnsspace_screaming-frogs-background-arrangement.wav");
+            Sound = new SoundPlayer($"{Environment.CurrentDirectory}\\music\\dersinnsspace_screaming-frogs-background-arrangement.wav");
         }
 
         private void Sewer_Click(object sender, EventArgs e)
         {
-            Sound = new SoundPlayer(@"D:\music\inspectorj_sewer.wav");
+            Sound = new SoundPlayer($"{Environment.CurrentDirectory}\\music\\inspectorj_sewer.wav");
         }
 
         private void Garbage_Click(object sender, EventArgs e)
         {
-            Sound = new SoundPlayer(@"D:\music\noisy-garbage.wav");
+            Sound = new SoundPlayer($"{Environment.CurrentDirectory}\\music\\noisy-garbage.wav");
         }
 
         private void Parking1_Click(object sender, EventArgs e)
         {
-            Sound = new SoundPlayer(@"D:\music\parking-garage-wind-1.wav");
+            Sound = new SoundPlayer($"{Environment.CurrentDirectory}\\music\\parking-garage-wind-1.wav");
         }
 
         private void Parking2_Click(object sender, EventArgs e)
         {
-            Sound = new SoundPlayer(@"D:\music\parking-garage-wind-2.wav");
+            Sound = new SoundPlayer($"{Environment.CurrentDirectory}\\music\\parking-garage-wind-2.wav");
         }
 
         private void TripRadio_Click(object sender, EventArgs e)
         {
-            Sound = new SoundPlayer(@"D:\music\trp_radio-frequency.wav");
+            Sound = new SoundPlayer($"{Environment.CurrentDirectory}\\music\\trp_radio-frequency.wav");
         }
 
         private void Noise2_Click(object sender, EventArgs e)
         {
-            Sound = new SoundPlayer(@"D:\music\white-noise-low-colour-a.wav");
+            Sound = new SoundPlayer($"{Environment.CurrentDirectory}\\music\\white-noise-low-colour-a.wav");
         }
 
         private void Engine_Click(object sender, EventArgs e)
         { 
-            Sound = new SoundPlayer(@"D:\music\engine-vibrations.wav");
+            Sound = new SoundPlayer($"{Environment.CurrentDirectory}\\music\\engine-vibrations.wav");
         }
         ///////////////////////////////
 
