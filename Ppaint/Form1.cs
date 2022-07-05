@@ -77,6 +77,31 @@ namespace Ppaint
                 return points;
             }
         }
+        
+        public void DownloadPicture(PictureBox pb) 
+        { 
+
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Filter = "Image Files(*.BMP; *.JPG; *GIF; *PNG)|*.BMP; .JPG; *GIF; *PNG;|All files (*.*)|*.*";
+
+            if(ofd.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    pb.Image = new Bitmap(ofd.FileName);
+                }
+                catch
+                {
+                    MessageBox.Show("NO. You can't.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+        public void ChoseSound (string nameSound)
+        {
+            Sound = new SoundPlayer($"{Environment.CurrentDirectory}\\music\\{nameSound}");
+        }
+        
+
         ///////////////////////////////////////////////////////
         
 
@@ -209,154 +234,89 @@ namespace Ppaint
         //Sound buttons//
         private void SewerCoin_Click(object sender, EventArgs e)
         {
-            Sound = new SoundPlayer($"{Environment.CurrentDirectory}\\music\\sewer-coin.wav");
+            ChoseSound("sewer-coin.wav");
         }
 
         private void River_Click(object sender, EventArgs e)
         {
-            Sound = new SoundPlayer($"{Environment.CurrentDirectory}\\music\\river-cargo.wav");
+            ChoseSound("river-cargo.wav");
         }
 
         private void button28_Click(object sender, EventArgs e)
         {
-            Sound = new SoundPlayer($"{Environment.CurrentDirectory}\\music\\rtty.wav");
+            ChoseSound("rtty.wav");
         }
 
         private void button24_Click(object sender, EventArgs e)
         {
-            Sound = new SoundPlayer($"{Environment.CurrentDirectory}\\music\\building-work.wav");
+            ChoseSound("building-work.wav");
         }
 
         private void Frogs_Click(object sender, EventArgs e)
         {
-            Sound = new SoundPlayer($"{Environment.CurrentDirectory}\\music\\dersinnsspace_screaming-frogs-background-arrangement.wav");
+            ChoseSound("dersinnsspace_screaming-frogs-background-arrangement.wav");
         }
 
         private void Sewer_Click(object sender, EventArgs e)
         {
-            Sound = new SoundPlayer($"{Environment.CurrentDirectory}\\music\\inspectorj_sewer.wav");
+            ChoseSound("inspectorj_sewer.wav");
         }
 
         private void Garbage_Click(object sender, EventArgs e)
         {
-            Sound = new SoundPlayer($"{Environment.CurrentDirectory}\\music\\noisy-garbage.wav");
+            ChoseSound("noisy-garbage.wav");
         }
 
         private void Parking1_Click(object sender, EventArgs e)
         {
-            Sound = new SoundPlayer($"{Environment.CurrentDirectory}\\music\\parking-garage-wind-1.wav");
+            ChoseSound("parking-garage-wind-1.wav");
         }
 
         private void Parking2_Click(object sender, EventArgs e)
         {
-            Sound = new SoundPlayer($"{Environment.CurrentDirectory}\\music\\parking-garage-wind-2.wav");
+            ChoseSound("parking-garage-wind-2.wav");
         }
 
         private void TripRadio_Click(object sender, EventArgs e)
         {
-            Sound = new SoundPlayer($"{Environment.CurrentDirectory}\\music\\trp_radio-frequency.wav");
+            ChoseSound("trp_radio-frequency.wav");
         }
 
         private void Noise2_Click(object sender, EventArgs e)
         {
-            Sound = new SoundPlayer($"{Environment.CurrentDirectory}\\music\\white-noise-low-colour-a.wav");
+            ChoseSound("white-noise-low-colour-a.wav");
         }
 
         private void Engine_Click(object sender, EventArgs e)
-        { 
-            Sound = new SoundPlayer($"{Environment.CurrentDirectory}\\music\\engine-vibrations.wav");
+        {
+            ChoseSound("engine-vibrations.wav");
         }
         ///////////////////////////////
 
         //Picture Boxes//
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = "Image Files(*.BMP; *.JPG; *GIF; *PNG)|*.BMP; .JPG; *GIF; *PNG;|All files (*.*)|*.*";
-
-            if(ofd.ShowDialog() == DialogResult.OK)
-            {
-                try
-                {
-                    pictureBox1.Image = new Bitmap(ofd.FileName);
-                }
-                catch
-                {
-                    MessageBox.Show("NO. You can't.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
+            DownloadPicture(pictureBox1);
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = "Image Files(*.BMP; *.JPG; *GIF; *PNG)|*.BMP; .JPG; *GIF; *PNG;|All files (*.*)|*.*";
-
-            if (ofd.ShowDialog() == DialogResult.OK)
-            {
-                try
-                {
-                    pictureBox2.Image = new Bitmap(ofd.FileName);
-                }
-                catch
-                {
-                    MessageBox.Show("NO. You can't.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
+            DownloadPicture(pictureBox2);
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = "Image Files(*.BMP; *.JPG; *GIF; *PNG)|*.BMP; .JPG; *GIF; *PNG;|All files (*.*)|*.*";
-
-            if (ofd.ShowDialog() == DialogResult.OK)
-            {
-                try
-                {
-                    pictureBox3.Image = new Bitmap(ofd.FileName);
-                }
-                catch
-                {
-                    MessageBox.Show("NO. You can't.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
+            DownloadPicture(pictureBox3);
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = "Image Files(*.BMP; *.JPG; *GIF; *PNG)|*.BMP; .JPG; *GIF; *PNG;|All files (*.*)|*.*";
-
-            if (ofd.ShowDialog() == DialogResult.OK)
-            {
-                try
-                {
-                    pictureBox4.Image = new Bitmap(ofd.FileName);
-                }
-                catch
-                {
-                    MessageBox.Show("NO. You can't.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
+            DownloadPicture(pictureBox4);
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            OpenFileDialog ofd = new OpenFileDialog();
-            ofd.Filter = "Image Files(*.BMP; *.JPG; *GIF; *PNG)|*.BMP; .JPG; *GIF; *PNG;|All files (*.*)|*.*";
-
-            if (ofd.ShowDialog() == DialogResult.OK)
-            {
-                try
-                {
-                    pictureBox5.Image = new Bitmap(ofd.FileName);
-                }
-                catch
-                {
-                    MessageBox.Show("NO. You can't.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
+            DownloadPicture(pictureBox5);
         }
         ///////////////////////////
         
